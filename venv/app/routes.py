@@ -1,6 +1,16 @@
 from app import app
 
-@app.routes("/")
-@app.routes("/index")
+@app.route("/")
+@app.route("/index")
 def index():
-    return "HEllo World"
+    user = {'username' : "Jerry"}
+    return """
+<html>
+    <head>
+        <title>Home Page Microblog</title>
+    </head>
+    <body>
+        <h1>Hello, """+ user['username'] + """!</h1>
+    </body>
+</html>
+"""
