@@ -79,11 +79,11 @@ class User(UserMixin, db.Model):
     
     def following_posts(self):
         Author = so.aliased(User)
-        Follower = so.aliased(User) 
+        Follower = so.aliased(User)
         return (
             sa.select(Post)
             .join(Post.author.of_type(Author))
-            .join(Author.followers.of_type(Follower))
+            .join(Author.followers.of_type(Follower), isouter=True)
             .where(sa.or_(
                 Follower.id == self.id,
                 Author.id == self.id,
