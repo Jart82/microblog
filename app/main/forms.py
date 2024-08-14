@@ -8,17 +8,6 @@ from app import db
 from app.models import User
 
 
-class SearchForm(FlaskForm):
-    q = StringField(_l('Search'), validators=[DataRequired()])
-
-    def __init__(self, *args, **kwargs):
-        if 'formdata' not in kwargs:
-            kwargs['formdata'] = request.args
-        if 'meta' not in kwargs:
-            kwargs['meta'] = {'csrf': False}
-        super(SearchForm, self).__init__(*args, **kwargs)
-        
-
 class EditProfileForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
     about_me = TextAreaField(_l('About me'),
@@ -45,3 +34,14 @@ class PostForm(FlaskForm):
     post = TextAreaField(_l('Say something'), validators=[
         DataRequired(), Length(min=1, max=140)])
     submit = SubmitField(_l('Submit'))
+
+
+class SearchForm(FlaskForm):
+    q = StringField(_l('Search'), validators=[DataRequired()])
+
+    def __init__(self, *args, **kwargs):
+        if 'formdata' not in kwargs:
+            kwargs['formdata'] = request.args
+        if 'meta' not in kwargs:
+            kwargs['meta'] = {'csrf': False}
+        super(SearchForm, self).__init__(*args, **kwargs)
