@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-14 20:52+0100\n"
+"POT-Creation-Date: 2024-08-16 08:55+0100\n"
 "PO-Revision-Date: 2024-07-31 16:52+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: app/__init__.py:23
+#: app/__init__.py:25
 msgid "Please log in to access this page."
 msgstr ""
 
@@ -99,7 +99,7 @@ msgstr ""
 msgid "About me"
 msgstr ""
 
-#: app/main/forms.py:15 app/main/forms.py:36 app/main/forms.py:51
+#: app/main/forms.py:15 app/main/forms.py:36 app/main/forms.py:53
 msgid "Submit"
 msgstr ""
 
@@ -107,11 +107,11 @@ msgstr ""
 msgid "Say something"
 msgstr ""
 
-#: app/main/forms.py:40 app/main/routes.py:168
+#: app/main/forms.py:40 app/main/routes.py:175
 msgid "Search"
 msgstr ""
 
-#: app/main/forms.py:50
+#: app/main/forms.py:51
 msgid "Message"
 msgstr ""
 
@@ -127,43 +127,51 @@ msgstr ""
 msgid "Explore"
 msgstr ""
 
-#: app/main/routes.py:96
+#: app/main/routes.py:104
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app/main/routes.py:101 app/templates/edit_profile.html:5
+#: app/main/routes.py:109 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr ""
 
-#: app/main/routes.py:113 app/main/routes.py:134
+#: app/main/routes.py:120 app/main/routes.py:141
 #, python-format
 msgid "User %(username)s not found."
 msgstr ""
 
-#: app/main/routes.py:116
+#: app/main/routes.py:123
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app/main/routes.py:120
+#: app/main/routes.py:127
 #, python-format
 msgid "You are following %(username)s!"
 msgstr ""
 
-#: app/main/routes.py:137
+#: app/main/routes.py:144
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app/main/routes.py:141
+#: app/main/routes.py:148
 #, python-format
 msgid "You are not following %(username)s."
 msgstr ""
 
-#: app/main/routes.py:188
+#: app/main/routes.py:191
 msgid "Your message has been sent."
 msgstr ""
 
-#: app/main/routes.py:190
+#: app/main/routes.py:193
 msgid "Send Message"
+msgstr ""
+
+#: app/main/routes.py:235
+msgid "An export task is currently in progress"
+msgstr ""
+
+#: app/main/routes.py:237
+msgid "Exporting posts..."
 msgstr ""
 
 #: app/templates/_post.html:14
@@ -183,15 +191,15 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:49 app/templates/messages.html:4
+#: app/templates/base.html:47 app/templates/messages.html:4
 msgid "Messages"
 msgstr ""
 
-#: app/templates/base.html:53
+#: app/templates/base.html:57
 msgid "Profile"
 msgstr ""
 
-#: app/templates/base.html:56
+#: app/templates/base.html:60
 msgid "Logout"
 msgstr ""
 
@@ -201,10 +209,12 @@ msgid "Hi, %(username)s!"
 msgstr ""
 
 #: app/templates/index.html:16 app/templates/search.html:12
+#: app/templates/user.html:55
 msgid "Newer posts"
 msgstr ""
 
 #: app/templates/index.html:21 app/templates/search.html:17
+#: app/templates/user.html:60
 msgid "Older posts"
 msgstr ""
 
@@ -225,26 +235,42 @@ msgstr ""
 msgid "Send Message to %(recipient)s"
 msgstr ""
 
-#: app/templates/user_popup.html:7
+#: app/templates/user.html:8
+msgid "User"
+msgstr ""
+
+#: app/templates/user.html:11 app/templates/user_popup.html:7
 msgid "Last seen on"
 msgstr ""
 
-#: app/templates/user_popup.html:9
+#: app/templates/user.html:13 app/templates/user_popup.html:9
 #, python-format
 msgid "%(count)d followers"
 msgstr ""
 
-#: app/templates/user_popup.html:9
+#: app/templates/user.html:13 app/templates/user_popup.html:9
 #, python-format
 msgid "%(count)d following"
 msgstr ""
 
-#: app/templates/user_popup.html:15
+#: app/templates/user.html:17
+msgid "Edit your profile"
+msgstr ""
+
+#: app/templates/user.html:23
+msgid "Export your posts"
+msgstr ""
+
+#: app/templates/user.html:31 app/templates/user_popup.html:15
 msgid "Follow"
 msgstr ""
 
-#: app/templates/user_popup.html:22
+#: app/templates/user.html:38 app/templates/user_popup.html:22
 msgid "Unfollow"
+msgstr ""
+
+#: app/templates/user.html:43
+msgid "Send private message"
 msgstr ""
 
 #: app/templates/auth/login.html:7
